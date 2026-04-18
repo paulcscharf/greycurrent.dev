@@ -56,10 +56,15 @@ h1 {
 main {
   margin: 1.5rem 0 4rem;
   background: var(--color-surface);
-  background: color-mix(in srgb, var(--color-surface) 85%, black);
   border: 1px solid #2f394e;
   border-radius: var(--radius);
   padding: 1.5rem;
+}
+
+@supports (background: color-mix(in srgb, white, black)) {
+  main {
+    background: color-mix(in srgb, var(--color-surface) 85%, black);
+  }
 }
 
 .description {
